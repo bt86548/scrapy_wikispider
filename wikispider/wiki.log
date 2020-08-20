@@ -1,0 +1,30 @@
+2020-05-28 20:16:15 [twisted] CRITICAL: Unhandled error in Deferred:
+2020-05-28 20:16:15 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\crawler.py", line 80, in crawl
+    self.engine = self._create_engine()
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\crawler.py", line 105, in _create_engine
+    return ExecutionEngine(self, lambda _: self.stop())
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\core\engine.py", line 70, in __init__
+    self.scraper = Scraper(crawler)
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\core\scraper.py", line 71, in __init__
+    self.itemproc = itemproc_cls.from_crawler(crawler)
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\middleware.py", line 58, in from_crawler
+    return cls.from_settings(crawler.settings, crawler)
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\middleware.py", line 34, in from_settings
+    mwcls = load_object(clspath)
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\site-packages\scrapy\utils\misc.py", line 44, in load_object
+    mod = import_module(module)
+  File "c:\users\big data\appdata\local\programs\python\python37-32\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "E:\google drive\wikispider\wikispider\wikispider\pipelines.py", line 10, in <module>
+    from wikiSpider.items import Article
+ModuleNotFoundError: No module named 'wikiSpider'
